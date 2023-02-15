@@ -77,20 +77,7 @@ def run(
     seen, windows, dt = 0, [], (Profile(), Profile(), Profile())
     # stream 할때 path : ['0'] , im.shape = (1,3,480,640) , im0s.shape = (1,480,640,3) , vid_cap : None , s : None(type: str)
     try:
-        while True:
-            # frames = pipeline.wait_for_frames()
-            # depth_frame = frames.get_depth_frame()
-            # color_frame = frames.get_color_frame()
-            # if not depth_frame or not color_frame:
-            #     continue
-                
-            # # depth image
-            # depth_image = np.asanyarray(depth_frame.get_data())
-            # depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
-            
-            # # Convert images to numpy arrays
-            # color_image = np.asanyarray(color_frame.get_data())
-            
+        while True:    
             ## align 
             frames = pipeline.wait_for_frames()
              # # Align the depth frame to color frame
